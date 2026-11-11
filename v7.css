@@ -1,0 +1,209 @@
+
+/* ---- v7：PCは中身を最大1000pxに、縦を詰める（1024px以上） ---- */
+@media(min-width:1024px){
+:root{--cw:1000px;--g:max(clamp(40px,4vw,64px),calc((100vw - var(--cw)) / 2))}
+/* ヘッダー：見出しの枠が1000pxになり、ヘッダーは白地の上に乗るので、文字を濃い色に（下へ進んだときの形は今のまま） */
+.head:not(.solid){color:#111}.head:not(.solid) .logo b{color:#8a6c2c}
+/* ヘッダーのメガメニューの中身 */
+.mega-in{max-width:var(--cw);padding-left:0;padding-right:0}
+/* ===== TOP ===== */
+/* FV：角丸の枠を1000pxに。高さも抑える */
+.s-fv{height:auto;min-height:0;padding:clamp(84px,7vw,104px) 0 0}
+.s-frame{max-width:var(--cw);height:clamp(500px,72svh,620px);margin:0 auto}
+/* Who We Are：写真の帯を1000pxに、高さを抑える */
+.s-wwrap{max-width:var(--cw);margin:0 auto}.s-wph{margin:0;height:clamp(320px,48vh,440px)}
+.s-wh{right:clamp(24px,4vw,56px);top:clamp(24px,5vh,48px);bottom:clamp(20px,4vh,40px)}.s-wh h2{font-size:clamp(30px,3.2vw,46px)}
+.s-read{padding:clamp(40px,4.4vw,64px) 0 clamp(36px,4vw,56px)}.s-read p{line-height:2}
+.s-keys{padding:clamp(18px,1.8vw,26px) 0}
+.s-flow{padding:clamp(16px,1.8vw,24px) 0}
+/* Our Services：大きな英字と行を1000pxの中で */
+.s-svh{padding-top:clamp(56px,5.6vw,80px);padding-bottom:clamp(28px,3vw,44px)}
+.s-big{font-size:clamp(64px,7.4vw,112px)}
+.s-its{padding-bottom:clamp(56px,5.6vw,80px)}
+.s-it>a{grid-template-columns:minmax(0,1fr) 168px;padding:clamp(18px,1.8vw,26px) 0 clamp(24px,2.4vw,34px)}
+.s-it .n{font-size:clamp(44px,4.2vw,64px)}.s-it h3{margin:10px 0 8px}
+.s-fill{margin:clamp(18px,1.8vw,26px) 0 clamp(24px,2.4vw,34px)}
+/* Company：写真・英字・入口を1000pxに */
+.s-co{padding:clamp(56px,5.6vw,80px) 0 clamp(56px,5.6vw,80px)}
+.s-cph{width:min(84.5vw,var(--cw));height:clamp(240px,28vw,360px)}
+.s-gl{font-size:min(17.2vw,168px);max-width:var(--cw);margin-left:auto;margin-right:auto;padding-right:0}
+.s-cgr{width:min(84.5vw,var(--cw));margin-top:clamp(40px,4vw,56px);gap:clamp(24px,3vw,40px)}
+.s-co2{font-size:clamp(40px,3.8vw,60px);top:96px}
+.s-cr>a{padding:clamp(16px,1.6vw,22px) 0}.s-cp{aspect-ratio:16/7}
+/* 採用・問い合わせの青の面：背景は画面幅、中身は1000px */
+.s-two{padding:0 calc((100% - var(--cw)) / 2);background:linear-gradient(90deg,var(--blue2) 50%,var(--blue) 50%)}
+.s-two.one{background:var(--blue)}
+.s-h{min-height:clamp(340px,46vh,420px);padding:clamp(40px,4vw,56px) clamp(24px,2.6vw,40px) clamp(40px,4vw,56px)}
+.s-h+.s-h{padding-right:clamp(24px,2.6vw,40px)}
+.s-h .big{font-size:clamp(60px,6vw,96px)}.s-h h2{padding-top:clamp(24px,3vw,40px)}
+.s-two.one .s-h{min-height:clamp(320px,42vh,400px);padding-left:clamp(24px,2.6vw,40px);padding-right:clamp(24px,2.6vw,40px)}
+/* フッター：中身は1000px（大きな英字の帯は飾りとして画面幅のまま） */
+.s-fti{padding-top:clamp(48px,4.4vw,64px);padding-bottom:clamp(32px,3vw,44px)}
+/* ===== 下層 ===== */
+/* ページ見出し：1000pxの角丸の枠。高さを抑える */
+.l-hd{padding:clamp(84px,7vw,104px) 0 0}
+.l-frame{max-width:var(--cw);margin:0 auto;height:clamp(300px,42svh,400px)}
+.l-ht .en{font-size:min(9cqw,96px)}
+.crumbs{padding-top:8px}
+/* セクション：上下の余白を詰め、中身は1000px */
+.l-sec{padding-top:clamp(48px,4.4vw,64px);padding-bottom:clamp(48px,4.4vw,64px)}
+.l-in{max-width:var(--cw)}
+.l-sh{margin-bottom:clamp(20px,2vw,32px)}.l-sh .en{font-size:clamp(36px,3.6vw,56px)}.l-sh.jo{font-size:clamp(24px,2.2vw,32px)}
+.l-h3{margin:clamp(28px,2.8vw,40px) 0 clamp(14px,1.4vw,20px)}
+/* 写真の帯：1000pxの中に収め、高さを抑える */
+.l-ph{margin:0 0 clamp(28px,2.8vw,40px);height:clamp(220px,32vh,300px)}.l-ph.solo{margin-bottom:clamp(28px,2.8vw,40px)}
+.l-ph .l-sh .en{font-size:clamp(32px,3.2vw,48px)}.l-ph .l-catch{font-size:clamp(16px,1.3vw,19px)}
+.l-sp{height:clamp(28px,2.8vw,40px)}
+/* 本文の中の写真・2〜3枚の帯・カードの写真：小さく */
+.l-pic{aspect-ratio:21/9;margin:clamp(24px,2.4vw,32px) 0}.l-pair{margin-top:clamp(28px,2.8vw,40px)}.l-pair .l-pic{aspect-ratio:16/9}
+.l-pic.l-jobpic{aspect-ratio:21/6}
+.l-cards{gap:clamp(24px,2.4vw,36px) clamp(16px,1.8vw,24px)}.l-cimg,.l-cards.wide .l-cimg{aspect-ratio:16/9;margin-bottom:6px}
+.l-cards li{gap:6px}.l-cards .k{font-size:clamp(26px,2.2vw,34px)}
+.l-dl li{padding:clamp(14px,1.4vw,20px) 0 clamp(16px,1.6vw,22px)}
+.l-flow{gap:28px 28px}.l-flow .n{margin-bottom:8px}
+.l-qa summary{min-height:56px;padding-top:12px;padding-bottom:12px}
+.l-voice{padding:clamp(16px,1.6vw,24px) 0}
+.l-tbl th,.l-tbl td{padding:clamp(10px,1vw,14px) 0}
+.l-mid{padding:clamp(28px,2.8vw,40px) var(--g)}
+.l-lead{padding:clamp(40px,4vw,56px) var(--g) clamp(40px,4vw,56px)}
+.l-art{padding:clamp(16px,1.6vw,24px) 0}
+.l-gap-t{margin-top:clamp(28px,2.8vw,40px)}
+/* 1画面に収めるための詰め（2回目の調整） */
+.l-ph{height:clamp(200px,28vh,260px)}
+.l-pair .l-pic{aspect-ratio:21/9}.l-pair.c3 .l-pic{aspect-ratio:16/9}
+.l-in>.l-pic{aspect-ratio:3/1}                                    /* 1000px幅に直接置く写真（メンバーとメニューの間など） */
+.l-cards.c2.wide{grid-template-columns:repeat(4,minmax(0,1fr))}  /* 実績4枚は1列に4枚 */
+.l-dl.c2{grid-template-columns:repeat(3,minmax(0,1fr))}          /* メニュー・制度などの一覧は3列 */
+.s-wph{height:clamp(300px,40vh,360px)}
+.s-cph{height:clamp(200px,22vw,300px)}.s-cp{aspect-ratio:16/6}.s-gl{font-size:min(14vw,140px)}
+/* 3回目の調整 */
+.l-sec{padding-top:clamp(40px,3.6vw,52px);padding-bottom:clamp(40px,3.6vw,52px)}
+.l-ph{height:clamp(200px,26vh,240px)}
+.l-in>.l-pic{aspect-ratio:4/1}
+.s-wph{height:clamp(260px,34vh,320px)}.s-read{padding:clamp(28px,3vw,40px) 0 clamp(24px,2.6vw,36px)}
+.s-co{padding:clamp(40px,4vw,56px) 0}.s-cph{height:clamp(180px,18vw,240px)}.s-cp{aspect-ratio:16/5}
+.s-cr>a{padding:14px 0}.s-cgr{margin-top:clamp(28px,2.8vw,40px)}.s-co2{font-size:clamp(36px,3.4vw,52px)}
+/* 4回目の調整（あと少しで1画面に入る所） */
+.l-pair .l-pic{aspect-ratio:3/1}
+.s-wph{height:clamp(240px,31vh,290px)}.s-keys{padding:14px 0}
+.s-co{padding:clamp(32px,3vw,44px) 0}.s-cph{height:clamp(160px,14vw,200px)}.s-cp{aspect-ratio:4/1}.s-cgr{margin-top:28px}
+/* Who We Are の縦書きの見出し：写真を低くしたので、PCでも写真の下に横書きで置く（スマホと同じ置き方） */
+.s-wph::after{display:none}.s-wph{height:clamp(200px,22vh,220px)}.s-read{padding-top:clamp(20px,2vw,28px)}.s-flow{padding:12px 0}
+.s-wh{position:static;display:block;writing-mode:horizontal-tb;padding:clamp(24px,2.4vw,32px) 0 0}
+.s-wh .lb{margin-bottom:10px}.s-wh h2{font-size:clamp(28px,2.8vw,40px);line-height:1.25;white-space:normal}.s-wh h2 span{display:inline}
+/* 事業部の見出し：枠が1000px幅になったので、PCはどの幅でも写真の下側を見せ、顔にインクがかからないように */
+.l-frame.h-company .s-pim img{object-position:50% 80%}
+/* 見出しの枠が低くなったので、インクを少し小さく低く（全ページ共通） */
+.l-frame .s-inkst{width:40%;bottom:-34%;left:-4%}
+/* 食品の見出し：奥の人の顔がインクの先に重ならないよう、写真の下側を見せる */
+.l-frame.h-service-food .s-pim img{object-position:50% 40%}
+/* サービス一覧の行の写真 */
+.l-list .s-svh{padding-bottom:clamp(20px,2vw,32px)}
+}
+/* 高さの低いPCの窓（1280×800など）は見出しの枠が低いので、写真の見せる位置を中ほどに */
+@media(min-width:1024px) and (max-height:850px){.l-frame.h-company .s-pim img{object-position:50% 66%}}
+
+@media(min-width:1024px){
+/* ヘッダー：ロゴ・ナビ・ボタンも1000pxの中に（背景は画面幅のまま） */
+.head{left:0;right:0;padding-left:var(--g);padding-right:var(--g)}
+.head:has(.open){border-radius:0}
+/* FV：キャッチの文を左の行に、お問い合わせのボタンを上の行の右に（タブレットと同じ置き方。間を空ける） */
+.s-fvt{grid-template-columns:1fr auto;grid-template-rows:1fr auto auto;padding:0 2.4cqw 2.2cqw}
+.s-fvt .sub{grid-column:1/-1;grid-row:2;text-align:left;margin:0 0 2.4cqw;padding:0 .4cqw}.s-fvt .sub::before{margin:0 0 10px}
+.s-go{grid-column:2;grid-row:1;align-self:end;margin:0 .4cqw 18px 0}
+/* Company の入口：見出しを1行に。3つの入口の高さをそろえる */
+.s-cgr{grid-template-columns:auto minmax(0,1fr)}
+.s-co2{white-space:nowrap}
+.s-cr>a{grid-template-columns:minmax(0,1fr) minmax(0,38%);align-items:center}
+.s-cr strong{white-space:nowrap;font-size:clamp(18px,1.6vw,22px)}
+.s-cr .t span{margin-top:6px}
+/* 事業の行（TOP・サービス一覧）：縦長の写真を低くし、行を詰める */
+.s-it>a{grid-template-columns:minmax(0,1fr) 132px;padding:14px 0 18px;gap:20px}
+.s-pt{aspect-ratio:1/1}
+.s-it .n{font-size:clamp(36px,3.2vw,48px)}.s-it h3{margin:6px 0 4px;font-size:clamp(17px,1.4vw,20px)}.s-it p{line-height:1.8}
+.s-ar{padding-top:8px;font-size:18px}
+.s-svh{padding-top:clamp(44px,4.4vw,60px);padding-bottom:clamp(20px,2vw,28px)}.s-big{font-size:clamp(56px,6vw,88px)}
+.s-its{padding-bottom:clamp(44px,4.4vw,60px)}.s-fill{margin:14px 0 18px}
+/* 写真の帯と、本文の中の写真をさらに低く */
+.l-ph{height:clamp(170px,22vh,200px)}
+.l-pic{aspect-ratio:3/1;margin:clamp(18px,1.8vw,24px) 0}
+.l-in>.l-pic{aspect-ratio:5/1}
+.l-pair.c3 .l-pic{aspect-ratio:2/1}
+/* 強みのカード：写真と文字を詰める */
+.l-cards.c3 .l-cimg{aspect-ratio:2/1}.l-cards li{gap:4px}.l-cards span:not(.k){line-height:1.8}
+.l-h3{margin:clamp(22px,2.2vw,30px) 0 clamp(10px,1vw,14px)}
+.l-sp{height:clamp(20px,2vw,28px)}
+/* メンバー・メニュー：一覧を詰める */
+.l-dl li{padding:12px 0 14px;gap:6px}.l-dl span{line-height:1.8}
+.l-tags li{min-height:40px;padding:6px 14px}
+}
+
+@media(min-width:1024px){
+/* メンバー・メニュー：写真をメンバーの一覧の横に置く（縦に積まない） */
+.l-in:has(> .l-tags){display:grid;grid-template-columns:minmax(0,1fr) minmax(0,38%);column-gap:28px}
+.l-in:has(> .l-tags) > *{grid-column:1/-1}
+.l-in:has(> .l-tags) > .l-h3.l-first{grid-column:1;grid-row:2}
+.l-in:has(> .l-tags) > .l-tags{grid-column:1;grid-row:3;align-content:start}
+.l-in:has(> .l-tags) > .l-pic{grid-column:2;grid-row:2/4;margin:0;aspect-ratio:16/9;align-self:start}
+/* 事業の行：見出しの英字を1行に、行の写真を小さく */
+.s-svh .s-big{white-space:nowrap;font-size:clamp(52px,5.2vw,76px)}.s-big .l{display:inline-block}
+.s-it>a{grid-template-columns:minmax(0,1fr) 112px;padding:10px 0 14px;gap:18px}
+.s-it .n{font-size:clamp(30px,2.6vw,40px)}
+/* ご挨拶・会社概要：本文の中の写真と、表のあとの写真を低く */
+.s-read .l-pic{aspect-ratio:4/1}
+.l-pair.c3 .l-pic{aspect-ratio:5/2}
+}
+
+@media(min-width:1024px){
+.l-in:has(> .l-tags) > .l-ph{height:clamp(140px,17vh,160px);margin-bottom:24px}
+.l-sec:has(.l-tags){padding-top:36px;padding-bottom:36px}
+.l-in:has(> .l-tags) .l-h3{margin:18px 0 10px}.l-in:has(> .l-tags) > .l-h3.l-first{margin-top:0}
+.l-dl li{padding:10px 0 12px}
+.s-svh{padding-top:36px;padding-bottom:16px}.s-its{padding-bottom:36px}
+.s-it>a{padding:8px 0 10px}.s-it p{line-height:1.7}.s-ar{padding-top:4px}
+.l-cards.c3 .l-cimg{aspect-ratio:3/1}
+.l-ph{height:clamp(160px,20vh,180px)}
+}
+
+@media(min-width:1024px){
+.s-it>a{grid-template-columns:minmax(0,1fr) 96px;padding:6px 0 8px;gap:16px}
+.s-it h3{margin:4px 0 2px}.s-svh p{line-height:1.8}
+.l-dl.c2:has(> li:nth-child(7)){grid-template-columns:repeat(4,minmax(0,1fr))}  /* メニューが7件の事業は4列 */
+}
+
+@media(min-width:1024px){
+.l-ph .s-pim img{object-position:50% 22%}
+}
+
+@media(min-width:1024px){
+.l-ph.p-v3-sv-band .s-pim img{object-position:50% 55%}
+.l-ph.p-v3-food-policy .s-pim img{object-position:50% 62%}
+.l-ph.p-v3-goods-policy .s-pim img{object-position:50% 60%}
+.l-ph.p-v3-acc-policy .s-pim img{object-position:50% 50%}
+}
+
+@media(min-width:1024px){
+/* 事業部の3つの帯：見出し・英字・キャッチの3行が入るよう高さを戻し、下を濃くして読めるように */
+.l-ph:has(.l-catch){height:240px}
+.l-ph:has(.l-catch)::after{background:linear-gradient(180deg,rgba(0,24,66,.05) 0,rgba(0,24,66,.35) 35%,rgba(0,24,66,.86) 100%)}
+.l-ph:has(.l-catch) .l-ov{bottom:22px}
+/* 事業の行の写真：96pxの正方形 → 横長の小さな写真（中身が分かる大きさ） */
+.s-it>a{grid-template-columns:minmax(0,1fr) 168px;padding:4px 0 6px;gap:16px;align-items:center}
+.s-pt{aspect-ratio:3/2;align-self:center}
+.s-it .s-tx{justify-content:center}
+.s-it p{font-size:13.5px;line-height:1.7}.s-it h3{font-size:clamp(16px,1.3vw,19px)}
+.s-it .s-tx{position:relative}.s-ar{position:absolute;right:0;top:6px;margin:0;padding:0;font-size:18px}  /* 矢印は残し、文字の列の右上へ（1行分詰める） */
+.s-svh{padding-top:24px;padding-bottom:12px;gap:12px 40px}.s-its{padding-bottom:28px}
+.s-fill{margin:4px 0 6px}
+/* sns のメンバー・メニュー（メニュー7件）：余白をあと少し詰める */
+.l-sec:has(.l-tags){padding-top:28px;padding-bottom:28px}
+.l-in:has(> .l-tags) > .l-ph{height:130px;margin-bottom:18px}
+.l-in:has(> .l-tags) .l-h3{margin:14px 0 8px}
+.l-dl.c2:has(> li:nth-child(7)) li{padding:6px 0 8px}.l-dl.c2:has(> li:nth-child(7)) span{line-height:1.7}
+.l-sec:has(.l-tags) .l-tags li{min-height:36px;padding:4px 12px}
+.l-in:has(> .l-tags):has(.l-dl.c2 > li:nth-child(7)) > .l-ph{height:116px}
+/* 頭の上が切れていた写真の見せる位置 */
+.l-ph.p-v3-sns-policy .s-pim img{object-position:50% 0%}
+.l-pic.p-v3-sns-mid img{object-position:50% 12%}
+.l-ph.p-v3-co-d1 .s-pim img{object-position:50% 0%}
+}
