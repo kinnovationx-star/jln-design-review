@@ -17,3 +17,5 @@
 /* v8（2026-11-13 ポインター service-ec #1・service-media #1「画像が大きい」）：メンバーとメニューの間の写真を低くする（全事業ページ） */
 .l-tags + .l-pic{aspect-ratio:21/9}
 @media(min-width:1024px){.l-tags + .l-pic{aspect-ratio:5/2}}
+/* v8：代表の写真は頭の上が切れないよう上寄せ */
+img[src$="v8-top-message.webp"]{object-position:50% 0%}
