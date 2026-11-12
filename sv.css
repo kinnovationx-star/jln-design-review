@@ -1,10 +1,11 @@
 /* sv：事業の行の写真を横長に、行の縦を詰める（2026-11-13） */
-.s-pt{aspect-ratio:3/2;align-self:center}
+/* 2026-11-13 平野さん「画像をもう少し縦に長く。画像と文章のバランスが悪い」→ 横長3:2をやめ正方形に。PCは写真の列も少し広げる */
+.s-pt{aspect-ratio:1/1;align-self:center}
 .s-it>a{align-items:center}
 @media(min-width:1024px){
 .s-svh{padding-top:clamp(72px,7vw,120px);padding-bottom:clamp(32px,3.4vw,52px)}
 .s-its{padding-bottom:clamp(64px,6vw,100px)}
-.s-it>a{grid-template-columns:minmax(0,1fr) 44%;padding:clamp(20px,1.8vw,28px) 0 clamp(22px,2vw,30px)}
+.s-it>a{grid-template-columns:minmax(0,1fr) 46%;padding:clamp(20px,1.8vw,28px) 0 clamp(22px,2vw,30px)}
 .s-it .n{font-size:clamp(44px,4.2vw,72px)}
 .s-it h3{margin:clamp(8px,.8vw,12px) 0 clamp(6px,.6vw,10px)}
 .s-it p{line-height:1.85}
