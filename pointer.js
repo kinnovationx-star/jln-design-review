@@ -55,7 +55,7 @@
     'body.__ptr-adding,body.__ptr-adding *{cursor:crosshair!important}' +
     (FOLD ? '#__ptr-bar{left:12px;right:auto;padding:5px}#__ptr-bar button,#__ptr-bar select{min-height:44px}' +
     '#__ptr-bar.fold>*:not(.__ptr-tog),#__ptr-bar.pick>*:not(.__ptr-add){display:none}' +
-    'body:has(.drawer:not([hidden])) #__ptr-bar{display:none}body{padding-bottom:64px}' : '');
+    'body:has(.drawer:not([hidden])) #__ptr-bar{display:none}' : '');  // 2026-11-13 ページの一番下の白い隙間をなくす（平野さんの指摘）。畳んだボタンはフッターの大きな飾り文字の上に乗るだけ
   document.head.appendChild(el('style', null, css));
 
   var layer = el('div', { id: '__ptr-layer', 'aria-hidden': 'true' });
