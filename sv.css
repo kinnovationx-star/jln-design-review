@@ -26,3 +26,5 @@ img[src$="v8-top-message.webp"]{object-position:50% 0%}
 .s-dc.c{left:-5vw;top:66vw;width:46vw}
 .s-dc.d{right:-6vw;top:104vw;width:44vw}
 @media(max-width:767px){.s-dc.c,.s-dc.d,.s-dc.e{display:none}}
+/* 2026-11-13 平野さん「スマホのCompanyのところ、画像と文字が上下逆。上画像・下文字」：縦に並ぶスマホだけ写真を先に */
+@media(max-width:767px){.s-cr .s-cp{order:-1}.s-cr>a{gap:14px}}
