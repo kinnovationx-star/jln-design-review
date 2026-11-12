@@ -21,7 +21,8 @@
 /* v8：代表の写真は頭の上が切れないよう上寄せ */
 img[src$="v8-top-message.webp"]{object-position:50% 0%}
 /* v9（2026-11-13）：Companyの下半分にも薄グレーの筆の形（c・d）。動きは data-p */
-.s-dc.c,.s-dc.d{overflow:visible}
+.s-dc.c,.s-dc.d,.s-dc.e{overflow:visible}
+.s-dc.e{left:-10vw;top:100vw;width:66vw}  /* 会社概要の左の白い面に大きく */
 .s-dc.c{left:-5vw;top:66vw;width:46vw}
 .s-dc.d{right:-6vw;top:104vw;width:44vw}
-@media(max-width:767px){.s-dc.c,.s-dc.d{display:none}}
+@media(max-width:767px){.s-dc.c,.s-dc.d,.s-dc.e{display:none}}
