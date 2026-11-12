@@ -20,3 +20,8 @@
 @media(min-width:1024px){.l-tags + .l-pic{aspect-ratio:5/2}}
 /* v8：代表の写真は頭の上が切れないよう上寄せ */
 img[src$="v8-top-message.webp"]{object-position:50% 0%}
+/* v9（2026-11-13）：Companyの下半分にも薄グレーの筆の形（c・d）。動きは data-p */
+.s-dc.c,.s-dc.d{overflow:visible}
+.s-dc.c{left:-5vw;top:66vw;width:46vw}
+.s-dc.d{right:-6vw;top:104vw;width:44vw}
+@media(max-width:767px){.s-dc.c,.s-dc.d{display:none}}
