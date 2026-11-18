@@ -28,3 +28,7 @@ img[src$="v8-top-message.webp"]{object-position:50% 0%}
 @media(max-width:767px){.s-dc.c,.s-dc.d,.s-dc.e{display:none}}
 /* 2026-11-13 平野さん「スマホのCompanyのところ、画像と文字が上下逆。上画像・下文字」：縦に並ぶスマホだけ写真を先に */
 @media(max-width:767px){.s-cr .s-cp{order:-1}.s-cr>a{gap:14px}}
+/* 2026-11-18 平野さん「ロゴこれ使って」：社名の「ＪＬＮ」を受け取ったロゴの画像に（fix_logo.py） */
+.logo,.fname{display:inline-flex;align-items:center;gap:.35em}
+.logo-mk{display:block;height:1.25em;width:auto}
+.fname .logo-mk{height:1.3em}
